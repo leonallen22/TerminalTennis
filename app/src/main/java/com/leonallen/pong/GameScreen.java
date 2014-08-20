@@ -1,14 +1,14 @@
 package com.leonallen.pong;
 
-import java.util.List;
-import java.util.ArrayList;
-
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.Log;
 
 import com.leonallen.pong.Input.TouchEvent;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GameScreen extends Screen
 {
@@ -563,7 +563,7 @@ public class GameScreen extends Screen
     public void paint(float deltaTime)
     {
         Graphics g = game.getGraphics();
-        //g.clearScreen(Color.BLACK);
+        g.clearScreen(Color.BLACK);
 
         drawPlayer(g);
         drawOpponent(g);

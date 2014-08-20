@@ -1,6 +1,4 @@
 package com.leonallen.pong;
-import java.io.IOException;
-import java.io.InputStream;
 
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -13,12 +11,14 @@ import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.Rect;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 public class AndroidGraphics implements Graphics
 {
     AssetManager assets;
     Bitmap frameBuffer;
     Bitmap background;
-    Canvas backgroundCanvas;
     Canvas canvas;
     Paint paint;
     int color;
@@ -29,9 +29,7 @@ public class AndroidGraphics implements Graphics
     {
         this.assets = assets;
         this.frameBuffer = frameBuffer;
-        this.background = frameBuffer;
         this.canvas = new Canvas(frameBuffer);
-        this.backgroundCanvas = new Canvas(background);
         this.paint = new Paint();
         this.color = Color.GREEN;
         paint.setColor(color);
