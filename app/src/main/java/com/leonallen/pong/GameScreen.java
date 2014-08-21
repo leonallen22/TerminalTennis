@@ -3,7 +3,6 @@ package com.leonallen.pong;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.util.Log;
 
 import com.leonallen.pong.Input.TouchEvent;
 
@@ -667,7 +666,6 @@ public class GameScreen extends Screen
             int relative_x = ball_x - player.getLeft();
             ball.setReturned(true);
             audio.playSound(1);
-            Log.i("Relative X: ", Integer.toString(relative_x));
 
             if(!player.isHit())
                 player.setHit(true);
@@ -697,7 +695,6 @@ public class GameScreen extends Screen
             int relative_x = ball_x - opponent.getLeft();
             ball.setReturned(false);
             audio.playSound(1);
-            Log.i("Opponent Relative X: ", Integer.toString(relative_x));
 
             if(!opponent.isHit())
                 opponent.setHit(true);
