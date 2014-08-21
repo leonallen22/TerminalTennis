@@ -22,7 +22,6 @@ public class Opponent extends Sprite
     public void move(Ball ball)
     {
         int x = bounds.centerX();
-        int y = bounds.centerY();
 
         if(ball.isReturned())
         {

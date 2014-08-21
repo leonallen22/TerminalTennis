@@ -49,16 +49,6 @@ public class Sprite
     {
         return hit;
     }
-    
-    public int getWidth()
-    {
-        return width;
-    }
-    
-    public int getHeight()
-    {
-        return height;
-    }
 
     public void setX(int x)
     {
@@ -78,20 +68,5 @@ public class Sprite
     public void setVisible(boolean visible)
     {
         this.visible = visible;
-    }
-    
-    public void offsetX(int dx)
-    {
-        bounds.offset(dx, 0);
-    }
-    
-    public void offsetY(int dy)
-    {
-        bounds.offset(0, dy);
-    }
-    
-    public void offset(int dx, int dy)
-    {
-        bounds.offset(dx, dy);
     }
 }
