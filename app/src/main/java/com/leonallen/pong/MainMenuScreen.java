@@ -3,9 +3,10 @@ package com.leonallen.pong;
 import android.graphics.Color;
 import android.graphics.Rect;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.leonallen.pong.Input.TouchEvent;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainMenuScreen extends Screen
 {
@@ -79,7 +80,6 @@ public class MainMenuScreen extends Screen
                         if(rect.contains(event.x, event.y))
                         {
                             //START GAME
-                            audio.stopSound();
                             game.setScreen(AndroidGame.gameScreen);
                         }
                     }

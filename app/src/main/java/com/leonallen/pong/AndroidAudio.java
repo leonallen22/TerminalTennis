@@ -1,14 +1,13 @@
 package com.leonallen.pong;
 
-import java.io.IOException;
-import java.lang.RuntimeException;
-
 import android.app.Activity;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
+
+import java.io.IOException;
 
 public class AndroidAudio implements Audio
 {
@@ -25,6 +24,10 @@ public class AndroidAudio implements Audio
         this.hit = MediaPlayer.create(activity.getApplicationContext(), R.raw.hit);
         this.score = MediaPlayer.create(activity.getApplicationContext(), R.raw.score);
         this.menu = MediaPlayer.create(activity.getApplicationContext(), R.raw.menu);
+        this.bounce.setVolume((float)0.1, (float)0.1);
+        this.hit.setVolume((float)0.1, (float)0.1);
+        this.score.setVolume((float)0.1, (float)0.1);
+        this.menu.setVolume(1, 1);
     }
 
     public Music createMusic(String filename)
