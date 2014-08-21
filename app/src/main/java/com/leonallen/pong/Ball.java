@@ -9,15 +9,13 @@ public class Ball extends Sprite
     public static final int INITIAL_DY = 12;
     public static final int INITIAL_DX = 0;
     private boolean returned;
-    private boolean served;
-    
+
     public Ball()
     {
         width = 15;
         height = 15;
         bounds = new Rect(INITIAL_X, INITIAL_Y, INITIAL_X+width, INITIAL_Y+height);
         returned = false;
-        served = false;
         dy = INITIAL_DY;
         dx = INITIAL_DX;
     }
@@ -28,7 +26,6 @@ public class Ball extends Sprite
         height = 10;
         bounds = new Rect (x, y, x+width, y+height);
         returned = false;
-        served = false;
         dy = INITIAL_DY;
         dx = INITIAL_DX;
     }
@@ -47,12 +44,7 @@ public class Ball extends Sprite
     {
         return returned;
     }
-    
-    public boolean isServed()
-    {
-        return served;
-    }
-    
+
     public void setdx(int dx)
     {
         this.dx = dx;
@@ -67,21 +59,15 @@ public class Ball extends Sprite
     {
         this.returned = returned;
     }
-    
-    public void setServed(boolean served)
-    {
-        this.served = served;
-    }
-    
+
     public void move()
     {
         bounds.offset(dx, dy);
     }
-    
+
     public void reset()
     {
         returned = false;
-        served = false;
         dy = 0;
         dx = 0;
         bounds.offsetTo(INITIAL_X, INITIAL_Y);

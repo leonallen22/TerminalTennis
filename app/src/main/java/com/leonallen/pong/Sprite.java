@@ -34,7 +34,7 @@ public class Sprite
     {
         return bounds.left;
     }
-    
+
     public Rect getBounds()
     {
         return bounds;

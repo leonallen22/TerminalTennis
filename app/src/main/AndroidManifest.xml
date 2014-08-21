@@ -13,7 +13,7 @@
         <activity
             android:name=".Pong"
             android:configChanges="keyboard|keyboardHidden|orientation"
-            android:label="Pong"
+            android:label="Terminal Tennis"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
