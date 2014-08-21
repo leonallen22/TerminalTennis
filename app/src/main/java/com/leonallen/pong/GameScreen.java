@@ -200,7 +200,10 @@ public class GameScreen extends Screen
         }
 
         if(playerScore >= 10 || opponentScore >= 10)
-            state = GameState.GameOver;
+        {
+            if(Math.abs(playerScore - opponentScore) >= 2)
+                state = GameState.GameOver;
+        }
 
         player.move();
         opponent.move(ball);
