@@ -8,7 +8,7 @@ public interface Audio
 
     public void playSound(int sound);
 
-    public  void pauseSound(int sound);
+    public  void stopSounds();
 
     public void playMenu();
 

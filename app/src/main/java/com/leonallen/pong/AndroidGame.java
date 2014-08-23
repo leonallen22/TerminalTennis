@@ -75,9 +75,7 @@ public abstract class AndroidGame extends Activity implements Game
         if(isFinishing())
             screen.dispose();
 
-        audio.pauseSound(0);
-        audio.pauseSound(1);
-        audio.pauseSound(2);
+        audio.stopSounds();
         audio.pauseTrack();
     }
 
