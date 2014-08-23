@@ -59,6 +59,11 @@ public abstract class AndroidGame extends Activity implements Game
         super.onResume();
         screen.resume();
         renderView.resume();
+
+        audio.playSound(0);
+        audio.playSound(1);
+        audio.playSound(2);
+        audio.playMenu();
     }
 
     public void onPause()
@@ -69,6 +74,11 @@ public abstract class AndroidGame extends Activity implements Game
 
         if(isFinishing())
             screen.dispose();
+
+        audio.pauseSound(0);
+        audio.pauseSound(1);
+        audio.pauseSound(2);
+        audio.pauseTrack();
     }
 
     public Input getInput()

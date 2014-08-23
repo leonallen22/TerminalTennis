@@ -75,6 +75,24 @@ public class AndroidAudio implements Audio
         }
     }
 
+    public  void pauseSound(int sound)
+    {
+        switch(sound)
+        {
+            case 0:
+                bounce.pause();
+                break;
+
+            case 1:
+                hit.pause();
+                break;
+
+            case 2:
+                score.pause();
+                break;
+        }
+    }
+
     public void playMenu()
     {
         if(!menu.isPlaying())
@@ -82,6 +100,12 @@ public class AndroidAudio implements Audio
             menu.setLooping(true);
             menu.start();
         }
+    }
+
+    public void pauseTrack()
+    {
+        if(menu.isPlaying())
+            menu.pause();
     }
 
     public void stopSound()
